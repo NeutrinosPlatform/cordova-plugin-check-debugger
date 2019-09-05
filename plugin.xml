@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="cordova-plugin-check-debugger"
+    version="0.0.1">
+    
+    <name>checkDebugger</name>
+    
+    <asset src="www/checkDebugger.js" target="js/checkDebugger.js"/>
+    
+    <js-module src="www/checkDebugger.js" name="checkDebugger">
+        <clobbers target="checkDebugger" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="checkDebugger">
+                <param name="ios-package" value="checkDebugger" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/checkDebugger.h" target-dir="DebuggerPlugin"/>
+        <source-file src="src/ios/checkDebugger.m" target-dir="DebuggerPlugin"/>
+    </platform>
+    
+</plugin>
