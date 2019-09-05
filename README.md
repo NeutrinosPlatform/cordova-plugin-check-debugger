@@ -7,7 +7,7 @@ cordova plugin add cordova-plugin-check-debugger
 ```
 
 ## Usage
-```
+```js
 checkDebugger.isAttached(function(isDebug) {
     if (isDebug) {
         // Do something aggressive here, like deleting your local storage or closing the app
