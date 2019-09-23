@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="cordova-plugin-check-debugger"
-    version="0.0.1">
-    
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-plugin-check-debugger" version="1.0.0">
+
     <name>checkDebugger</name>
-    
+
     <asset src="www/checkDebugger.js" target="js/checkDebugger.js"/>
-    
+
     <js-module src="www/checkDebugger.js" name="checkDebugger">
         <clobbers target="checkDebugger" />
     </js-module>
@@ -20,5 +18,14 @@
         <header-file src="src/ios/checkDebugger.h" target-dir="DebuggerPlugin"/>
         <source-file src="src/ios/checkDebugger.m" target-dir="DebuggerPlugin"/>
     </platform>
-    
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="checkDebugger">
+                <param name="android-package" value="com.neutrinos.checkdebuggerplugin.checkDebugger"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/checkDebugger.java" target-dir="src/com/neutrinos/checkdebuggerplugin/" />
+    </platform>
+
 </plugin>
