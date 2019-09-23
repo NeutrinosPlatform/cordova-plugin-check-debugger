@@ -23,5 +23,5 @@
     ],
     "author": "jatahworx",
     "license": "ISC",
-    "description": "cordova plugin for mobile ocr text recognition"
+    "description": "cordova plugin for checking if a debugger is attached to the app"
 }
